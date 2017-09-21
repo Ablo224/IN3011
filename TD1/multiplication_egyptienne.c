@@ -3,38 +3,27 @@
 
 void multiplication(int x,int y)
 {
-	int X,Y,rest;
-	X=x;
-	Y=y;
+	int rest;
 	rest=0;
 	
 	printf("               %d * %d\n",x,y);
-	while(X > 1)
+	while(x > 1)
 	{
-	if(x%2 == 0)
-	{
-		 X = x/2;
-		 Y = 2*y;
-		 printf("          = %d * %d + %d",X,Y,rest);
+		if(x%2 == 0)
+		{
 		 x = x/2;
-		 y = Y;
-		 
-	}
-	else if(x % 2 !=0)
-	{
-		X = x-1;
+		 y = 2*y;
+		 printf("          = %d * %d + %d",x,y,rest);
+		}
+		else if(x % 2 !=0)
+		{
+		x= x-1;
 		rest += y;
-		printf("          = %d * %d + %d",X,y,rest);
-		x = x-1;
-		
-		
-	}
-	printf("\n");
-	}
-	printf("          = %d\n",y+rest);
-
-
-		
+		printf("          = %d * %d + %d",x,y,rest);
+		}
+		printf("\n");
+		}
+		printf("          = %d\n",y+rest);
 }
 
 
@@ -42,7 +31,7 @@ void multiplication(int x,int y)
 int main()
 {
 	
-	multiplication(23,87);
+	multiplication(42,87);
 	
 	
 	return 0;
