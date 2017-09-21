@@ -11,17 +11,16 @@ void multiplication(int x,int y)
 	{
 		if(x%2 == 0)
 		{
-		 x = x/2;
-		 y = 2*y;
-		 printf("          = %d * %d + %d",x,y,rest);
+				x = x/2;
+				y = 2*y;
 		}
-		else if(x % 2 !=0)
+		else
 		{
-		x= x-1;
-		rest += y;
-		printf("          = %d * %d + %d",x,y,rest);
+				x= x-1;
+				rest += y;
 		}
-		printf("\n");
+			printf("          = %d * %d + %d\n",x,y,rest);
+			
 		}
 		printf("          = %d\n",y+rest);
 }
@@ -31,7 +30,7 @@ void multiplication(int x,int y)
 int main()
 {
 	
-	multiplication(42,87);
+	multiplication(23,87);
 	
 	
 	return 0;
