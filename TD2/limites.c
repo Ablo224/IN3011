@@ -3,7 +3,20 @@
 #include <math.h>
 #include <time.h>
 
-int main()
+float calculS(float epsilon)
+{
+	float S,Sprec;
+	int n;
+	n=1; Sprec = 0.0;
+	do
+	{
+		S = Sprec + 1./(n*n);
+		n=n+1;
+	}while(S -Sprec > epsilon);
+return S;
+}
+
+/*int main()
 {
 	double precision=0.01;
 	double lim = 0;
@@ -21,4 +34,16 @@ int main()
 	printf("la limite est égale : %lf`\n",lim);
 
 return 0;
+}*/
+
+int main()
+{
+	float epsilon;
+	float S=0.0;
+	epsilon = 1e-3;
+	S = calculS(epsilon);
+	
+	printf("%f\n",S);
+	
+	return 0;
 }
