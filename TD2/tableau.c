@@ -5,7 +5,7 @@
 #define NMAX 100
 
 
-
+//fonction qui calcul le produit des element d'un tableau
 int  produit_elem_tab(int Tab[NMAX],int n)
 {
 	int prod = 1;
@@ -16,8 +16,7 @@ int  produit_elem_tab(int Tab[NMAX],int n)
 	return prod;
 }
 
-
-
+//fonction qui retourne le minimum dans un tableau
 int minimum(int tab[NMAX],int n)
 {
 	int min = tab[0];
@@ -32,6 +31,7 @@ int minimum(int tab[NMAX],int n)
 	return min;
 }
 
+//fonction de decalage à droit
 void decalage(int tab[NMAX],int n)
 {
 	for(int i=n-1;i>0;i--)
@@ -41,6 +41,7 @@ void decalage(int tab[NMAX],int n)
 	tab[0] = 0;
 }
 
+//fonction qui insère un nombre dans un tableau trié
 int InsertionElement(int tab[NMAX],int n,int elem)
 {
 	int i=0;
@@ -57,6 +58,7 @@ int InsertionElement(int tab[NMAX],int n,int elem)
 	return n;
 }
 
+//fonction inversant un tableau
 void Inversion(int tab[NMAX],int n)
 {
 	int tmp,i,j;
@@ -70,6 +72,7 @@ void Inversion(int tab[NMAX],int n)
 	}
 }
 
+//elemination de doublon
 void EliminerDoublons(int tab[NMAX],int n)
 {
 	int i,j;
@@ -94,6 +97,7 @@ void EliminerDoublons(int tab[NMAX],int n)
 	}
 }
 
+//moyenne par section
 float MoyenneParSection(int tab[NMAX],int n)
 {
 	float moy;
@@ -127,6 +131,7 @@ float MoyenneParSection(int tab[NMAX],int n)
 	return moy;
 }
 
+//fonction de saisie des val d'un tableau
 void saisie_val(int tab[NMAX],int n)
 {
 	for(int i=0;i<n;i++)
@@ -136,6 +141,7 @@ void saisie_val(int tab[NMAX],int n)
 	}
 }
 
+//fonction d'affichage
 void affichage(int Tab[NMAX],int taille_tab)
 {
 	for(int i=0;i<taille_tab;i++)
