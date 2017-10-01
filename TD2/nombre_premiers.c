@@ -7,7 +7,7 @@ int main()
 	int nbr;
 	srand(time(NULL));
 	nbr = rand () % 100;
-	for(int i=2;i*i<=nbr;i++)
+	for(int i=2;i*i<=nbr/2;i++)
 	{
 		if(nbr%i == 0)
 		{
