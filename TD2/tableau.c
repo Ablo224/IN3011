@@ -141,6 +141,24 @@ void saisie_val(int tab[NMAX],int n)
 	}
 }
 
+//fonction qui compte le nombre de valeurs differentes
+
+int NombreValeursDifferentes(int tab[NMAX],int n)
+{
+	int nbre_val = n;
+	for(int i=0;i<n;i++)
+	{
+		for(int j=i+1;j<n;j++)
+		{
+			if(tab[i] == tab[j])
+			{
+				nbre_val--;
+			}
+		}
+	}
+	return nbre_val;
+}
+
 //fonction d'affichage
 void affichage(int Tab[NMAX],int taille_tab)
 {
@@ -169,10 +187,11 @@ int main()
 	//Inversion(tab,n);
 	//printf("affichage après inversion du tableau: \n");
 	//affichage(tab,n);
-	EliminerDoublons(tab,n);
-	printf("affichage après élimination des doublons: \n");
-	affichage(tab,n);
-	printf("\nla moyenne est :%f\n",MoyenneParSection(tab,n));
+	//EliminerDoublons(tab,n);
+	//printf("affichage après élimination des doublons: \n");
+	//affichage(tab,n);
+	//printf("\nla moyenne est :%f\n",MoyenneParSection(tab,n));
+	printf("le nombre de valeurs différentes est : %d\n",NombreValeursDifferentes(tab,n));
 
 		
 		
