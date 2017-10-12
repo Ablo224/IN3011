@@ -17,10 +17,10 @@ void afficher_taille_mem(void)
 	//printf("taille d'un INT[]: %lu\n",sizeof(int[]));
 	char tab[10];
 	printf("\n\n");
-	printf("taille de TAB: %lu\n",sizeof(tab));
+	//printf("taille de **T: %lu\n",sizeof(t));
 	printf("taille de TAB[0]: %lu\n",sizeof(tab[0]));
 	printf("taille de &TAB[0]: %lu\n",sizeof(&tab[0]));
-	printf("taille de *&TAB: %lu\n",sizeof(*&tab));
+	printf("taille de *&TAB: %lu\n",sizeof(*(&tab)));
 	printf("taille de *&TAB[0]: %lu\n",sizeof(*&tab[0]));
 	printf("\n\n");
 	char (*p)[10]=&tab;
@@ -28,8 +28,6 @@ void afficher_taille_mem(void)
 	printf("taille de *P: %lu\n",sizeof(*p));
 	printf("taille de (*P)[2]: %lu\n",sizeof((*p)[2]));
 	printf("taille de &(*P)[2]: %lu\n",sizeof(&(*p)[2]));
-
-	
 }
 
 void Permutation(int *a,int *b)
@@ -48,7 +46,7 @@ void reinitPointeur(int* (*p))
 
 int main()
 {	
-	//afficher_taille_mem();
+	afficher_taille_mem();
 	/*int a=15;
 	int b=6;
 	int* c;
